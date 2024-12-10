@@ -23,7 +23,7 @@ public class Game
         pair[1]=pwd;
         System.out.println("Enter unique gamer key");
         key=sc.nextInt();
-        boolean srch=u.search(key,usrnm,pwd);
+        boolean srch=u.search(key,pwd);
         if(srch==true)
         {
             welcome();
@@ -57,7 +57,7 @@ public class Game
         String newPwd=sc.nextLine();
         key=generateKey();
         System.out.println("Your unique gamer tag is: "+key);
-        u.insert(key,newUsrnm,newPwd);
+        u.insert(key,newPwd);
         System.out.println("Registeration complete...");
         login();
     }
